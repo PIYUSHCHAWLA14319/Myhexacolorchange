@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click</button>
+      
+    <script>
+           function BackgroundChange() {
+               let Hexa ='#'
+               let Words ='0123456789abcdef'
+               for(let i=0; i<6; i++){
+                Hexa+= Words[Math.floor(Math.random()*16)]
+                
+            }
+               return Hexa;
+           }
+           let Btn = document.querySelector('#btn');
+           let Body = document.querySelector('body')
+           Btn.addEventListener('click',()=>{
+                Body.style.backgroundColor = BackgroundChange(); 
+           })
+    </script>
+</body>
+</html>

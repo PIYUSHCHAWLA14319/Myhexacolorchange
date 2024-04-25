@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            padding: 10px 73px;
+            background-color: blue;
+            border: none;
+            outline: none;
+            margin-top: 10%;
+            font-size: 23px;
+        }
+    </style>
+</head>
+<body>
+      <button id="btn">Click</button>
+      <script>
+        let btn = document.getElementById('btn')
+        let Body = document.querySelector('body')
+        let Colors =['black','red','orange','pink','crimson','skyblue','green','lightgreen']
+        let piyush=()=>{
+            let IndexNumber = parseInt(Math.random()*Colors.length)
+            Body.style.backgroundColor=Colors[IndexNumber]
+        }
+        Body.style.backgroundColor='gray'
+        btn.addEventListener('click',piyush)
+      </script>
+</body>
+</html>
